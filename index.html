@@ -14,7 +14,9 @@
                 <div class="flex-container">
                 <h1>Weather App</h1><br>
                    <div class="d-flex">
-                        <input class="form-control" id="city" type="text" placeholder="Enter a city.."><br>
+                        <select name="cities" class="form-control" id="city">
+                            <option value="">Select a city</option>
+                        </select><br>
                         <input class="btn btn-warning button" id="search" type="button" value="Search"><br>
                     </div>
                         <p id="error_field" ></p>
@@ -28,47 +30,7 @@
                 </div>        
             </div>
     </div>
-        <script type="text/javascript">
-
-                document.getElementById('search').onclick = function(){
-
-                    const city = document.getElementById('city').value;
-                  if(city != ''){
-                    async function getData() {
-                        const url = `http://api.weatherapi.com/v1/current.json?key=1ba70ac989c045888d7210602241011&q=${city}`;
-                        try {
-                            const response = await fetch(url);
-                            if (!response.ok) {
-                            throw new Error(`Response status: ${response.status}`);
-                            }
-                            const json = await response.json();
-
-                            const s_city  = json.location.name;
-                            document.getElementById('name_city').innerHTML = s_city;
-                            console.log(s_city);
-
-                            const temp_c = json.current.temp_c;
-                            document.getElementById("tempC").innerHTML = temp_c;
-
-                            const feelsLike = json.current.feelslike_c;
-                            document.getElementById("feels_like").innerHTML = 'Feels like '+feelsLike;
-                            console.log(json);
-
-                            const humidC = json.current.condition.text;
-                            document.getElementById("humid_c").innerHTML = humidC;
-                            console.log(humidC);
-                           
-                            const humidImg = json.current.condition.icon;
-                            document.getElementById("humid_icon").src = humidImg;
-                            console.log(humidImg);
-                        } catch (error) {
-                            console.error(error.message);
-                        }
-                        }
-                        getData();
-                    }
-                }
-
+        <script type="text/javascript" src="script.js">         
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
