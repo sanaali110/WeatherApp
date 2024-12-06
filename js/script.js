@@ -49,7 +49,7 @@ const loadCityNames = (cities) => {
     * Always define, scope of the variable while declaring,
     * By not using const here will create the variable in global scope.
     */
-    const selectElement = document.getElementById('city');
+    const selectElement = document.querySelector('#city');
     cities.geonames.forEach(city => {
         const opt = document.createElement('option');
         opt.value = city.name;
@@ -60,14 +60,8 @@ const loadCityNames = (cities) => {
 
 // This methods is fetching cities list from the api
 const getCities = async () => {
-    const cities = []
-    try {
-        const response = await fetch(citiesApiURL);
-        cities = await response.json();
-    } catch (error) {
-        console.error('Error fetching cities', error);
-    }
-    return cities;
+    const response = await fetch(citiesApiURL);
+    return await response.json();
 }
 
 /*
@@ -94,5 +88,7 @@ window.onload = () => {
     */
     getCities().then((cities) => {
         loadCityNames(cities)
+    }).catch((error) => {
+        console.error('Error fetching cities', error);
     })
 }
