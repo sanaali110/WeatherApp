@@ -1,57 +1,68 @@
-body{
+body {
     font-family: sans-serif;
 }
 
-#error_field{
-    color:red;
+#error_field {
+    color: red;
 }
-.container{
-    max-width:500px !important;
-    height:500px;
-    padding:40px;
-    margin-top:80px;
-    border-radius:20px;
+
+.container {
+    max-width: 500px !important;
+    height: 500px;
+    padding: 40px;
+    margin-top: 80px;
+    border-radius: 20px;
 
 }
-.weather_app_container{
-background: rgb(0,36,4);
-background: -moz-linear-gradient(82deg, rgba(0,36,4,1) 0%, rgba(97,184,124,1) 0%, rgba(0,159,191,1) 100%);
-background: -webkit-linear-gradient(82deg, rgba(0,36,4,1) 0%, rgba(97,184,124,1) 0%, rgba(0,159,191,1) 100%);
-background: linear-gradient(82deg, rgba(0,36,4,1) 0%, rgba(97,184,124,1) 0%, rgba(0,159,191,1) 100%);
+
+.weather_app_container {
+    background: rgb(0, 36, 4);
+    background: -moz-linear-gradient(82deg, rgba(0, 36, 4, 1) 0%, rgba(97, 184, 124, 1) 0%, rgba(0, 159, 191, 1) 100%);
+    background: -webkit-linear-gradient(82deg, rgba(0, 36, 4, 1) 0%, rgba(97, 184, 124, 1) 0%, rgba(0, 159, 191, 1) 100%);
+    background: linear-gradient(82deg, rgba(0, 36, 4, 1) 0%, rgba(97, 184, 124, 1) 0%, rgba(0, 159, 191, 1) 100%);
 }
-.flex-container{
+
+.flex-container {
     display: flex;
     flex-direction: column;
-   
-    
+
+
 }
-.flex-container h1{
-    font-size:48px;
-    font-weight:700;
+
+.flex-container h1 {
+    font-size: 48px;
+    font-weight: 700;
 }
-.button{
-    max-width:100px;
-    margin-left:10px;
+
+.button {
+    max-width: 100px;
+    margin-left: 10px;
 }
-.city-name{
-    font-size:28px;
-    font-weight:700;
+
+.city-name {
+    font-size: 28px;
+    font-weight: 700;
 }
-.condition{
+
+.condition {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.condition img{
-    max-width:70px;
+
+.condition img {
+    max-width: 70px;
 }
-.condition p{
+
+.condition p {
     margin-bottom: 0;
 }
-.temp{
-    font-size:64px;
-    font-weight:700;
+
+.temp {
+    font-size: 64px;
+    font-weight: 700;
 }
-#humid_c{
-    font-weight:700;
+
+#humid_c {
+    font-weight: 700;
 }
